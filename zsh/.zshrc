@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
@@ -69,7 +66,6 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export FZF_BASE="$HOME/.fzf"
 plugins=(git)
 plugins+=(zsh-nvm)
 plugins+=(fzf)
@@ -105,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
-alias vi=vim
+alias vi=nvim
 alias tm=tmux
 alias tma="tmux attach-session -t"
 alias tml="tmux ls"
@@ -169,3 +165,4 @@ alias la='ls -lAth'
 #     fi
 # fi
 # unset __conda_setup CONDA_PATH
+#
