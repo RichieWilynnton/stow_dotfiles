@@ -16,12 +16,6 @@ return {
 				clangd = {},
 				-- Python
 				pyright = {},
-				hls = {
-					filetypes = { "haskell", "lhaskell", "cabal" },
-					settings = {
-						haskell = { formattingProvider = "ormolu" },
-					},
-				},
 				-- JavaScript/TypeScript
 				vtsls = {
 					settings = {
