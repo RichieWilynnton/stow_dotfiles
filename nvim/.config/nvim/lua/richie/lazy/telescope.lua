@@ -1,6 +1,5 @@
 return {
   "nvim-telescope/telescope.nvim",
-  tag = "0.1.5",
   dependencies = { "nvim-lua/plenary.nvim" },
 
   config = function()
@@ -35,7 +34,6 @@ return {
 
     local builtin = require("telescope.builtin")
 
-    -- Keymaps with descriptions for which-key
     vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
     vim.keymap.set("n", "<leader>pg", builtin.git_files, { desc = "[G]it files" })
     vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "[P]roject [S]earch" })
