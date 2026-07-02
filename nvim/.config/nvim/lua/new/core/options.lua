@@ -45,3 +45,12 @@ opt.scrolloff = 999
 
 -- Persistent undo even after you close a file and re-open it
 opt.undofile = true
+
+-- Showing diagnostics
+vim.diagnostic.config({
+  virtual_text = true,  -- Show error and warnings as virtual text
+  underline = true,     -- MUST be true for red underlines
+  signs = true,         -- Shows icons in the gutter
+  update_in_insert = false,  -- Avoid distractions while typing
+  severity_sort = true,
+})

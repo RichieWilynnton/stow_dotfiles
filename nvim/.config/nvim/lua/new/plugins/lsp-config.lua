@@ -13,11 +13,7 @@ return {
 			-- 1. LSP
 			local servers = {
 				-- C++
-				clangd = {
-					on_attach = function(client)
-						client.server_capabilities.documentFormattingProvider = false
-					end,
-				},
+				clangd = {},
 				-- Python
 				pyright = {},
 				hls = {
@@ -65,10 +61,11 @@ return {
 			-- 2. Formatters (conform)
 			local formatters = {
 				python = { "black" },
-				cpp = { "clang-format" },
+				c = { "lsp" },
+				cpp = { "lsp" },
 				lua = { "stylua" },
-				javascript = { "prettierd", "prettier" },
-				typescript = { "prettierd", "prettier" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
 			}
 
 			-- 3. Linters (nvim-lint)
@@ -86,7 +83,7 @@ return {
 			-- Combine keys for auto-install
 			local ensure_installed = vim.tbl_keys(servers)
 			-- Add extra tools that aren't LSPs (like formatters/linters)
-			vim.list_extend(ensure_installed, { "black", "stylua", "prettierd", "clang-format" })
+			vim.list_extend(ensure_installed, { "black", "stylua", "prettierd" })
 
 			require("mason-tool-installer").setup({
 				ensure_installed = ensure_installed,
