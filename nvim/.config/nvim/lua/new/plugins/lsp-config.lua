@@ -79,10 +79,12 @@ return {
 			-- Add extra tools that aren't LSPs (like formatters/linters)
 			vim.list_extend(ensure_installed, { "black", "stylua", "prettierd" })
 
-			require("mason-tool-installer").setup({
+			local mti = require("mason-tool-installer")
+			mti.setup({
 				ensure_installed = ensure_installed,
-				automatic_installation = true,
+				automatic_installation = false,
 			})
+
 			require("mason-lspconfig").setup()
 
 			-- 5. LSP SETUP
